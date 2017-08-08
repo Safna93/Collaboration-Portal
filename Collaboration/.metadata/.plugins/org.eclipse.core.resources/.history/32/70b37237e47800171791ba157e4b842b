@@ -1,0 +1,20 @@
+package com.niit.dao;
+
+import javax.transaction.Transactional;
+
+import org.h2.engine.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository
+@Transactional
+public class UserDAOImpl implements UserDAO
+{
+	@Autowired
+	private SessionFactory sessionFactory;
+	public void registerUSer(User user)
+{
+		Session session=sessionFactory.getCurrentSession();
+		session.addSavepoint(user);
+}

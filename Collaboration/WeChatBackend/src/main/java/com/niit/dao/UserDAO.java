@@ -1,0 +1,9 @@
+package com.niit.dao;
+
+import com.niit.model.User;
+
+public interface UserDAO {
+void registerUser(User user);
+User validateUsername(String username);
+User validateEmail(String email);
+}
