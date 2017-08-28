@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+</head>
+<body>
+<div class="container">
+<div class="w3-animate-opacity">
+<h2><strong><u>Registration</u></strong></h2>
+
+<br>
+
+<form class="form-horizontal">
+<font face="arial narrow" size="3">
+<!-- 
+{{error.message}}
+<form>
+Enter username <input type="text"  ng-model="user.username"><Br>
+Enter password <input type="password" ng-model="user.password"><br>
+Enter firstname<input type="text" ng-model="user.firstname"><br>
+Enter lastname <input type="text" ng-model="user.lastname"><br>
+Enter Email <input type="email" ng-model="user.email"><br>
+Enter phonenumber <input type="text" ng-model="user.phonenumber"><br>
+Select Role<br>
+<input type="radio" value="STUDENT" ng-model="user.role">Student <br>
+<input type="radio" value="ALUMINI" ng-model="user.role">Alumini<br>
+<input type="radio" value="EMPLOYEE" ng-model="user.role">Employee<br>
+
+<input type="submit" ng-click="registerUser()">
+
+</form>
+ -->
+<div class="form-group">
+  <label class="col-md-2 control-label" >FirstName: </label>  
+  <div class="col-md-3">
+  <input placeholder="Enter firstname" class="form-control input-md" ng-model="user.firstname" type="text" required>
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-2 control-label" >LastName: </label>  
+  <div class="col-md-3">
+  <input placeholder="Enter lastname" class="form-control input-md" ng-model="user.lastname" type="text" required>
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-2 control-label" >E-Mail Address: </label>  
+  <div class="col-md-3">
+  <input placeholder="Enter E-Mail Address" class="form-control input-md" ng-model="user.email" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Eg:safna@xxx.yyy>"required>
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-2 control-label" >Phone: </label>  
+  <div class="col-md-3">
+  <input placeholder="Enter phonenumber" class="form-control input-md" pattern="[789][0-9]{9}" title="Should be 10 digits starting from 7,8 or 9" ng-model="user.phonenumber" type="text" required>
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-2 control-label" >Username: </label>  
+  <div class="col-md-3">
+  <input placeholder="Enter Username" class="form-control input-md" pattern="[a-z0-9]{5,30}" minlength="5" maxlength="30"
+        title="it should be of min 5 char, start with small letter & no space." ng-model="user.username" type="text" required>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-2 control-label" >Password: </label>  
+  <div class="col-md-3">
+  <input placeholder="Enter Password" class="form-control input-md" minlength="6" maxlength="16"  title="Six or more characters" ng-model="user.password" type="password" required>
+  </div>
+</div>
+
+
+
+
+	<div class="radio col-md-2">
+      <label class="radio col-md-3"><input type="radio" ng-model="user.role" value="STUDENT">Student</label>
+    </div>
+    
+    <div class="radio col-md-2">
+      <label class="radio col-md-3"><input type="radio" ng-model="user.role" value="ALUMNI">Alumni</label>
+    </div>
+    
+    <div class="radio col-md-2">
+      <label class="radio col-md-3"><input type="radio" ng-model="user.role" value="EMPLOYEE">Employee</label>
+    </div>
+    <br>
+<div class="form-group">
+<br><br>
+<div class="col-md-3">
+
+<button type="submit" class="btn btn-primary btn-block" ng-click="registerUser()">Register</button>
+
+</div>
+</div>
+</font>
+
+{{errorMessage}}
+</form>
+</div>
+</div>
+</body>
+</html>

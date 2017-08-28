@@ -1,0 +1,16 @@
+/**
+ * BlogPostDetailController
+ */
+
+app.controller('BlogPostDetailController',function($scope,$location,$routeParams,BlogPostService){
+	var id=$routeParams.id
+	$scope.blogPost=BlogPostService.getBlogPostById(id).then(function(rsponse){
+		$scope.blogPost=response.data;
+		console.log(response.data)
+	},function(response){
+		console.log(response.status)
+		if(response.status==401)
+			$location.path('/login')
+	})
+	
+	})

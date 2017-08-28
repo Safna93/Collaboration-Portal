@@ -1,0 +1,32 @@
+
+
+<div ng-show="currentUser.role=='ADMIN'">
+List of BlogPost waiting for approval<br>
+<table class="table table-striped">
+<thead>
+<tr><th>Title</th><th>Author</th><th>Date</th></tr>
+</thead>
+<tbody>
+<tr ng-repeat="blog in blogPostsWaitingForApproval">
+<td><a href="#getblogpostbyid/{{blog.id}}">{{blog.blogTitle}}</a></td><td>{{blog.postedBy.username}}</td><td>{{blog.postedOn | date:'MM/dd/yyyy HH:mm'}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<!-- APPROVED BLOGPOST -->
+<div>
+List of BlogPosts which are approved<br>
+<table class="table table-striped">
+<thead>
+<tr><th>Title</th><th>Author</th><th>Date</th></tr>
+</thead>
+<tbody>
+<tr ng-repeat="blog in blogPostsApproved">
+<td><a href="#getblogpostbyid/{{blog.id}}">{{blog.blogTitle}}</a></td><td>{{blog.postedBy.username}}</td><td>{{blog.postedBy.username}}</td><td>{{blog.postedOn | date:'MM/dd/yyyy HH:mm'}}</td>
+</tr>
+</tbody>
+</table>
+
+</div>

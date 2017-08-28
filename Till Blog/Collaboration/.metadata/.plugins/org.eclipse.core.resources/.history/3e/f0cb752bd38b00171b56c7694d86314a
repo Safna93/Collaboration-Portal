@@ -1,0 +1,41 @@
+<!--  <div class="row">
+<div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<div>{{blogPost.blogTitle}}</div>
+<span><strong>Created By:</strong>{{blogPost.postedBy.username}}</span>
+<span><strong>Created On:</strong>{{blogPost.postedOn | date:'medium'}}</span>
+</div>
+<div class="panel-body">
+{{blogPost.description}}</div>
+
+</div>
+
+</div>
+</div>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Blog Details</title>
+</head>
+
+<body>
+<div class="w3-animate-opacity">
+<div class="row">
+<!-- <div class="col-sm-12 col-md-12 col-lg-12"> -->
+<div class="panel panel-info">
+
+<div class="panel-heading">
+<div >{{blogPost.blogTitle}}</div>
+&nbsp;&nbsp;&nbsp;&nbsp;            
+<span><strong>CretedBy: </strong>{{blogPost.postedBy.username}}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span><strong>CreatedOn: </strong>{{blogPost.postedOn | date:'medium'}}</span>
+</div>
+
+<div class="panel-body">
+{{blogPost.description}}
+</div>
+
+</div>

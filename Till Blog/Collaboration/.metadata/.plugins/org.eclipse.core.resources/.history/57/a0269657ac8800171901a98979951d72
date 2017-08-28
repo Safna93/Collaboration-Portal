@@ -1,0 +1,297 @@
+<!--  <!DOCTYPE html>
+<html>
+<head>
+<link href="css/.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     
+   
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+	<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+	
+	<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-cookies.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="controller/usercontroller.js"></script>
+	<script type="text/javascript" src="service/userservice.js"></script>
+	<link href="css/sample.css"/>
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+	rel="stylesheet" />
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style>
+
+body
+{
+padding-top:0px;
+background-image: url("images/chat8.png");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center; 
+background-size: cover; 
+}
+
+
+</style>
+<body ng-app="app">
+<header>
+            <nav class="navbar navbar-default">
+            
+           <div class="container-fluid">
+		<button type="button" class="navbar-toggle collapsed" 
+   data-toggle="collapse" data-target="#collapse-example" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <div class="navbar-header">
+                <a href="" class="pull-left"><img
+								src="http://ggxy.gufe.edu.cn/themes/ggxy/Public/assets/images/wx-icon.jpg"
+								width="70" height="50"></a>
+                    <a class="navbar-brand" href="/"><b>WeCHAT</b></a>
+                </div>
+<div class="collapse navbar-collapse" id="collapse-example">
+                <ul class="nav navbar-nav ">
+                <li><a href="#/home" ng-show="currentUser.firstname"><b>Home</b></a></li>
+                <li><a href="#/aboutus" ng-show="currentUser.firstname"><b>About Us</b></a></li>
+                <li><a href="#" ng-show="currentUser.firstname"><b>Welcome<i> {{currentUser.firstname}} {{currentUser.lastname}}</i></b> </a></li>
+                </ul>
+                
+                 <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/register" ng-hide="currentUser.firstname"><span class="glyphicon glyphicon-user"></span><b>&nbsp;Sign Up</b></a></li>
+                <li><a href="#/login" ng-hide="currentUser.firstname"><span class="glyphicon glyphicon-log-in"></span><b>&nbsp;Login</b></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                
+                <li><a href="" ng-click="logout()" ng-show="currentUser.firstname"><b>Logout</b></a>
+                </li>
+                </ul>
+                
+
+</div>
+</div>
+  
+            </nav>
+        </header>
+<div ng-view></div>
+</body>
+
+	
+</html>-->
+
+
+ <!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"  />
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.1/sockjs.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.2/lodash.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-cookies.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<title>WeCHAT</title>
+</head>
+<style>
+body
+{
+padding-top:135px;
+background-image: url("images/chat8.png");
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center; 
+background-size: cover; 
+}
+
+.footer-bs {
+    background-color: #3c3d41;
+	padding: 10px 10px;
+	color: rgba(255,255,255,1.00);
+	margin-bottom: 5px;
+	border-bottom-right-radius: 6px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 6px;
+}
+.footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
+.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
+.footer-bs .footer-brand h2 { margin:0px 0px 10px; }
+.footer-bs .footer-brand p { font-size:12px; color:rgba(255,255,255,0.70); }
+
+.footer-bs .footer-nav ul.pages { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.pages li { padding:5px 0px;}
+.footer-bs .footer-nav ul.pages a { color:rgba(255,255,255,1.00); font-weight:bold; text-transform:uppercase; }
+.footer-bs .footer-nav ul.pages a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+.footer-bs .footer-nav h4 {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+}
+
+.footer-bs .footer-nav ul.list { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.list li { padding:5px 0px;}
+.footer-bs .footer-nav ul.list a { color:rgba(255,255,255,0.80); }
+.footer-bs .footer-nav ul.list a:hover { color:rgba(255,255,255,0.60); text-decoration:none; }
+
+.footer-bs .footer-social ul { list-style:none; padding:0px; }
+.footer-bs .footer-social h4 {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+.footer-bs .footer-social li { padding:5px 4px;}
+.footer-bs .footer-social a { color:rgba(255,255,255,1.00);}
+.footer-bs .footer-social a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+
+.footer-bs .footer-ns h4 {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+}
+.footer-bs .footer-ns p { font-size:12px; color:rgba(255,255,255,0.70); }
+
+@media (min-width: 2000px) {
+	.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
+}
+
+.navbar-fixed-top
+{
+   padding-top:14px;
+   padding-bottom:14px;
+}
+</style>
+
+
+<body ng-app="app">
+
+<font face="arial narrow" size="3">
+
+<div class="navbar-wrapper">
+<div class="container">
+<nav class="navbar navbar-inverse navbar-fixed-top w3-animate-opacity">
+		<div class="container">
+			<div class="navbar-header">
+			<a href="" class="pull-left"><img
+								src="http://ggxy.gufe.edu.cn/themes/ggxy/Public/assets/images/wx-icon.jpg"
+								width="70" height="50"></a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#/home"><font face="stencil" size="5" color="white"><u>WeCHAT</u></font></a>
+			</div>
+			<div id="navbar-collapse" class="collapse navbar-collapse">
+				
+				<ul class="nav navbar-nav navbar-right">
+					 <ul class="nav navbar-nav ">
+                <li><a href="#/home" ng-hide="currentUser.firstname"><b>Home</b></a></li>
+                <li><a href="#/aboutus" ng-hide="currentUser.firstname"><b>About Us</b></a></li>
+                <li><a href="#/contactus" ng-hide="currentUser.firstname"><b>ContactUs</b></a></li>
+                <li><a href="#/editprofile" ng-show="currentUser.role=='EMPLOYEE' || currentUser.role=='STUDENT'"><b>UpdateProfile</b></a></li>
+                
+                <li><a href="#/savejob" ng-show="currentUser.role=='ADMIN'"><b>Post a Job</b></a>
+                <li><a href="#/getalljobs" ng-show="currentUser.firstname"><b>Get All Jobs</b></a>
+                </li>
+                
+            
+                <ul class="nav navbar-nav navbar-right">
+                	<li class="dropdown" ng-show="currentUser.username">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown"><b>Blogs</b><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/getallblogs">View all Blogs</a></li>
+							<li><a href="#/saveblogpost">Add a new Blog</a></li>
+						</ul>
+					</li>
+                </ul>
+                
+                
+                
+                
+                
+                
+                
+                
+                 <ul class="nav navbar-nav navbar-right">
+                <li><a href="#/register" ng-hide="currentUser.firstname"><span class="glyphicon glyphicon-user"></span><b>&nbsp;Sign Up</b></a></li>
+                <li><a href="#/login" ng-hide="currentUser.firstname"><span class="glyphicon glyphicon-log-in"></span><b>&nbsp;Login</b></a></li>
+             
+                </ul>
+               
+                </li>
+                </ul>
+                
+					
+					
+					
+					
+					<li class="dropdown" >
+						<a href="" class="dropdown-toggle" data-toggle="dropdown" ng-show="currentUser.username">Welcome, {{currentUser.firstname}} ! <span class="glyphicon glyphicon-user"></span><b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							 <li><a href="" ng-click="logout()" ng-show="currentUser.firstname"><b>Logout</b></a>							
+							 
+						</ul>
+					</li>			
+				</ul>
+				
+			</div>
+		 </div>
+</nav>
+</div>
+</div>
+
+
+<div class="container">
+
+<div ng-view></div>
+
+</div>
+
+</font>
+
+</body>
+    <script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="controller/usercontroller.js"></script>
+	<script type="text/javascript" src="service/userservice.js"></script>
+	
+	<script type="text/javascript" src="controller/jobcontroller.js"></script>
+	<script type="text/javascript" src="service/jobservice.js"></script>
+	
+	<script type="text/javascript" src="controller/blogpostcontroller.js"></script>
+	<script type="text/javascript" src="service/blogpostservice.js"></script>
+	
+	
+
+
+
+
+
+
+
+
+	
+</html>
+

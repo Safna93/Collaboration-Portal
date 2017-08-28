@@ -1,0 +1,113 @@
+<!--  <div class="container">
+<span style="color:red">{{error.message}}</span>
+<form>
+<div class="form-group">
+Enter Job Title : <input type="text" ng-model="job.jobtitle" class="form-control">
+</div>
+
+<div class="form-group">
+Enter Job Description: <textarea rows="4" cols="15" ng-model="job.jobDescription" class="form-control"></textarea>
+</div>
+
+<div class="form-group">
+Enter Skills Required: <input type="text" ng-model="job.skillsrequired" class="form-control">
+</div>
+
+<div class="form-group">
+Enter Years of Experience: <input type="text" ng-model="job.yrsOfExp" class="form-control">
+</div>
+
+<div class="form-group">
+Enter Salary:<input type="text" ng-model="job.salary" class="form-control">
+</div>
+
+<div class="form-group">
+Enter Location :<input type="text" ng-model="job.location" class="form-control">
+</div>
+
+<div class="form-group">
+Enter Company Name: <input type="text" ng-model="job.companyname" class="form-control">
+</div>
+
+<div class="form-group">
+<input type="submit" ng-click="saveJob()" class="form-control">
+</div>
+
+</form>
+</div>-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insertion</title>
+</head>
+<body>
+
+<div class="container">
+<div class="w3-animate-opacity">
+<h2><strong><u>Post a Job title and its details:</u></strong></h2>
+
+<br>
+<span style="color:red">{{error.message}}</span>
+<form class="form-horizontal">
+<font face="arial narrow" size="3">
+
+<div class="form-group">
+  <label class="col-md-2 control-label" >Job Title: </label>
+  	<div class="col-md-3">
+	<textarea class="form-control" placeholder="Enter Title" ng-model="job.jobtitle" ></textarea>
+	</div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-2 control-label" >Job Description: </label>
+  	<div class="col-md-7">
+	<textarea class="form-control" placeholder="Enter Job description" ng-model="job.jobDescription" ></textarea>
+	</div>
+</div>
+<div class="form-group">
+  <label class="col-md-2 control-label" >Experience </label>
+  	<div class="col-md-7">
+	<textarea class="form-control" placeholder="Enter Job description" ng-model="job.yrsOfExp" ></textarea>
+	</div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-2 control-label" >Salary: </label>
+  	<div class="col-md-3">
+	<input placeholder="Enter Salary" class="form-control input-md" type="text" ng-model="job.salary" >
+	</div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-2 control-label" >Required Skills: </label>
+  	<div class="col-md-7">
+	<textarea placeholder="Enter Skills" class="form-control" ng-model="job.skillsrequired" ></textarea>
+	</div>
+</div>
+<div class="form-group">
+  <label class="col-md-2 control-label" >Company</label>
+  	<div class="col-md-3">
+	<input placeholder="Enter Location" class="form-control input-md" type="text" ng-model="job.companyname" >
+	</div>
+</div> 
+<div class="form-group">
+  <label class="col-md-2 control-label" >Location: </label>
+  	<div class="col-md-3">
+	<input placeholder="Enter Location" class="form-control input-md" type="text" ng-model="job.location" >
+	</div>
+</div> 
+
+<div class="form-group">
+<div class="col-md-3">
+<button type="submit" class="btn btn-primary btn-block col-md-3" ng-click="saveJob()">Post</button>
+</div>
+</div>
+
+<!-- <input type="submit" ng-click="saveJob()" value="Insert"></td>  search for  $scope.save in jobController and call the function -->
+
+</font>
+</form>
+
+</body>
+</html> 
