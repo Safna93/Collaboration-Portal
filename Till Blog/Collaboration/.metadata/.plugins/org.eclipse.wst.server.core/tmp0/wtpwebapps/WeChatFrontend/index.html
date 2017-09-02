@@ -235,9 +235,10 @@ background-size: cover;
 						<ul class="dropdown-menu">
 							<li><a href="#/getallblogs" id="ntext"><b>All Blogs</b></a></li>
 							<li><a href="#/saveblogpost" id="ntext"><b>Add a new Blog</b></a></li>
-							<li><a href="#/editprofile" id="ntext" ng-show="currentUser.role=='EMPLOYEE' || currentUser.role=='STUDENT'"><b>Edit User Profile</b></a></li>
+							
 						</ul>
 					</li>
+					<li><a href="#/editprofile" id="ntext" ng-show="currentUser.role=='EMPLOYEE' || currentUser.role=='STUDENT'"><b>Edit User Profile</b></a></li>
                 
                 <li class="dropdown" ng-show="currentUser.username">
 						<a href="" id="ntext" class="dropdown-toggle" data-toggle="dropdown" >Friends<b class="caret"></b></a>

@@ -16,6 +16,7 @@ package com.niit.configuration;
 	import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 	import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.niit.model.BlogComment;
 import com.niit.model.BlogPost;
 import com.niit.model.Job;
 import com.niit.model.User;
@@ -55,7 +56,7 @@ import com.niit.model.User;
 		System.out.println("Factory builder object created");
 		
 		
-		sessionBuilder.addAnnotatedClass(User.class).addAnnotatedClass(Job.class).addAnnotatedClass(BlogPost.class);
+		sessionBuilder.addAnnotatedClass(User.class).addAnnotatedClass(Job.class).addAnnotatedClass(BlogPost.class).addAnnotatedClass(BlogComment.class);
 		
 		System.out.println("Session factory object creation");
 		SessionFactory sessionFactory=sessionBuilder.buildSessionFactory();

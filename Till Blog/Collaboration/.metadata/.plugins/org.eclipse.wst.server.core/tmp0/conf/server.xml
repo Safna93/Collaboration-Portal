@@ -124,7 +124,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\Users\Shafna Shroff\Desktop\Collaboration\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\Shafna Shroff\Desktop\Collaboration\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WeChatBackend" path="/WeChatBackend" reloadable="true" source="org.eclipse.jst.j2ee.server:WeChatBackend"/><Context docBase="C:\Users\Shafna Shroff\Desktop\Collaboration\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WeChatFrontend" path="/WeChatFrontend" reloadable="true" source="org.eclipse.jst.jee.server:WeChatFrontend"/></Host>
+      <Context docBase="C:\Users\Shafna Shroff\Desktop\Till Blog\Collaboration\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\Shafna Shroff\Desktop\Till Blog\Collaboration\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WeChatBackend" path="/WeChatBackend" reloadable="true" source="org.eclipse.jst.j2ee.server:WeChatBackend"/><Context docBase="C:\Users\Shafna Shroff\Desktop\Till Blog\Collaboration\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WeChatFrontend" path="/WeChatFrontend" reloadable="true" source="org.eclipse.jst.jee.server:WeChatFrontend"/></Host>
     </Engine>
   </Service>
 </Server>

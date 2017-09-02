@@ -1,6 +1,3 @@
-/**
- * BlogPostController
- */
 app.controller('BlogPostController',function(BlogPostService,$scope,$location){
 	
 	BlogPostService.getBlogPostsWaitingForApproval().then(function(response){
