@@ -1,0 +1,7 @@
+
+Firstname:{{user.username}}<br>
+Lastname:{{user.lastname}}<br>
+Email:{{user.email}}<br>
+
+
+<a href="#/pendingfriendrequests">Back</a>

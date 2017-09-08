@@ -1,0 +1,43 @@
+package com.niit.dao;
+
+import javax.transaction.Transactional;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.niit.model.ProfilePic;
+
+@Repository
+@Transactional
+public class ProfilePictureDAOImpl implements ProfilePictureDAO{
+
+	private SessionFactory sessionFactory;
+	public void save(ProfilePic profilePicture) {
+		
+		Session session=sessionFactory.getCurrentSession();
+		session.saveOrUpdate(profilePicture);
+	}
+
+	@Override
+	public ProfilePic getProfilePic(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+   /* @Autowired
+	private SessionFactory sessionFactory;
+	public void saveProfilePicture(ProfilePic profilePicture) {
+		Session session=sessionFactory.getCurrentSession();
+		session.saveOrUpdate(profilePicture);
+		
+	}
+
+	public ProfilePic getProfilePicture(String username) {
+		Session session=sessionFactory.getCurrentSession();
+		ProfilePic profilePicture=(ProfilePic)session.get(ProfilePic.class,username);
+		return profilePicture;
+	}*/
+
+
+}

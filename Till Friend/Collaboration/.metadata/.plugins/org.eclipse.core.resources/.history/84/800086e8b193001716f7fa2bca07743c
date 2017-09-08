@@ -1,0 +1,21 @@
+
+
+
+
+<font face="arial narrow" size="4">
+<center>
+<h2><strong><u>UserDetails:</u></strong></h2>
+<b></b><br>
+<table class="table table-striped">
+<thead>
+<tr><th>Firstname:{{user.firstname}}</th><br>
+<th>Lastname:{{user.lastname}}</th><br>
+<th>Email:{{user.email}}</th></tr>
+</thead>
+<tbody>
+
+<td><a href="#/pendingrequests">Back</a>
+</tr>
+</tbody>
+</table>
+</div>

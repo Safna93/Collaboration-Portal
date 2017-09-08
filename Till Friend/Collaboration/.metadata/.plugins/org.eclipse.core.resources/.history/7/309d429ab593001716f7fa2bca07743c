@@ -1,0 +1,13 @@
+<div class="w3-animate-opacity">
+<b><u>Job Details:</u></b><br>
+<b>First name: </b>{{user.firstname}}<br><br>
+<b>Last name: </b>{{user.lastname}}<br><br>
+<b>Email: </b>{{user.email}}<br><br>
+
+
+
+<td><a href="#/pendingrequets">Back</a>
+</tr>
+</tbody>
+</table>
+</div>

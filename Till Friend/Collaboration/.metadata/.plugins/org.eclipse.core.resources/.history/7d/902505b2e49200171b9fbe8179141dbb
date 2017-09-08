@@ -1,0 +1,51 @@
+<html>
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Job titles</title>
+</head>
+
+<body>
+<div class="w3-animate-opacity">
+<font face="arial narrow" size="4">
+<center>
+<h2><strong><u>List of Job Titles available:</u></strong></h2>
+<br>
+<table>
+
+
+<div>
+Search :<input ng-model="searchText">
+Search By Title:<input ng-model="searchText.jobtitle">
+Search By Skills Required:<input ng-model="searchText.skillsrequired">
+
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Title</th><th>Posted On</th><th>Skills Required</th>
+</tr>
+</thead>
+<tr ng-repeat="job in jobs | filter : searchText | filter : searchText.jobtitle|filter : searchText.skillsrequired">
+<td><a href="" ng-click="getJobDetails(job.id)" id="ntext">{{job.jobtitle}}</a></td>
+<td>{{job.postedOn | date : 'medium'}}</td>
+<td>{{job.skillsrequired}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+<div ng-show="showJobDetails">
+<div class="w3-animate-opacity">
+<b><u>Job Details:</u></b><br>
+<b>Job title: </b>{{job.jobtitle}}<br><br>
+<b>Job Description: </b>{{job.jobDescription}}<br><br>
+<b>Skills Required: </b>{{job.skillsrequired}}<br><br>
+<b>Experience:</b> {{job.yrsOfExp}}<br><br>
+<b>Salary: </b>{{job.salary}}<br><br>
+<b>Posted On:</b> {{job.postedOn}}<br><br>
+<b>Company: </b>{{job.companyname}}<br><br>
+<b>Location:</b> {{job.location}}<br><br>
+</div>
+</div>

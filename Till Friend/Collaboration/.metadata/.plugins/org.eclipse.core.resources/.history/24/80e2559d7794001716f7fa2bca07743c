@@ -1,0 +1,66 @@
+/**
+ * suggesteduserlist
+ */
+app.controller('FriendController',function($scope,$location,FriendService){
+	function listOfSuggestedUsers(){
+		FriendService.listOfSuggestedUsers().then(function(response){
+			$scope.suggestedusers=response.data
+		},function(response){
+			if(response.status==401)
+				$location.path('/login')
+				console.log(response.status)
+		})
+	}
+	/*pending list*/
+	function listOfPendingRequests(){
+		FriendService.listOfPendingRequests().then(function(response){
+			$scope.pendingRequests=response.data;
+		},function(response){
+			if(response.status==401)
+				$location.path('/login')
+				console.log(response.status)
+		})
+	}
+/*
+ * toId=user.username
+ */
+	
+	$scope.friendRequest=function(toId){
+		FriendService.friendRequest(toId).then(function(response){
+			alert("Request sent")
+			listOfSuggestedUsers();
+		$location.path('/suggesteduserslist')
+	},function(response){
+		if(response.status==401)
+			$location.path('/login')
+			console.log(response.status)
+	})
+	
+	}
+	
+	$scope.updatePendingRequest=function(pendingRequest,status){
+			/*pendingRequest.status='P'
+			 * pendingRequest.status->assign A/D
+			 */
+			console.log(pendingRequest.status)
+			pendingRequest.status=status
+			/*pendingRequest is an object of type Friend
+			 * id,fromId,toId and status(A/D)
+			 */
+			FriendService.updatePendingRequest(pendingRequest).then(function(response){
+				alert("updated...Thank you for your response")
+				listOfPendingRequests()
+				$location.path('/pendingrequests')
+			},function(response){
+				if(response.status==401)
+					$location.path('/login')
+					console.log(response.status)
+			
+		})
+		}		
+		
+listOfSuggestedUsers()
+listOfPendingRequests()
+})
+
+

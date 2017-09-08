@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="ISO-8859-1">
+<title><u>WeCHAT</u></title>
+
+</head>
+
+<link href="css/footer.css" rel="stylesheet">
+<body style="background-color:#2fc91e;">
+<center>
+<div class="w3-animate-opacity">
+<!-- <video autoplay="" type="video/mp4" src="//res.wx.qq.com/a/wx_fed/weixin_portal/res/static/res/1QzwDFl.mp4" loop=""></video>-->
+
+<h2>WELCOME TO <br><br><u><strong><font face="stencil" size="10"><a href=""><img
+								src="http://ggxy.gufe.edu.cn/themes/ggxy/Public/assets/images/wx-icon.jpg"
+								width="70" height="50">WeCHAT</a></font></strong></u> !!!!!</h2>
+<p><font face="courier new"><strong>Bringing out the best in each other!</strong></font></p>
+
+<p><font size="7"></font></p>
+<br>
+<p><font size="5">The one of its kind collaboration portal site you will need !</font></p>
+
+</div>
+</center>
+
+<div class="w3-container w3-padding-64">
+
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+    
+      <h3><strong>We know how to collaborate...</strong></h3>
+      <p>Here is where we understand your needs and requirements. Information needed wherever necessary is in the palm of your hands.</p>
+      <p ng-hide="currentUser.username"><a href="#/register" class="w3-btn"><i class="fa fa-th"></i> Register if you do not have an account </a></p>
+    </div>
+    
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="images/palmtop.png" width="700" height="394">
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-padding-64">
+  <div class="w3-row-padding">
+    
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="images/chat1.jpg" width="700" height="394">
+    </div>
+    
+    <div class="w3-col m6">
+      <h3><strong>Where we come to talk...</strong></h3>
+      <p>You can also engage in a conversation with other users online by opening chatrooms, blogs, etc. and share your queries as well...</p>
+      <p ng-hide="currentUser.username"><a href="#/login" class="w3-btn"><i class="fa fa-th"></i> Login if you have an account </a></p>
+    </div>
+    
+  </div>
+</div>
+
+<div class="w3-container w3-padding-64">
+  <div class="w3-row-padding">
+    
+    <div class="w3-col m6">
+      <h3><strong><font face="stencil" ><u>WeCHAT</u></font> with customization</strong></h3>
+      <p><strong><font face="stencil" ><u>WeCHAT</u></font></strong> deals with certain child or client institutes, be it in search of a job, or a problem to be solved in a project where developers need to get their bugs fixed, and much more than that. <strong><font face="stencil" ><u>WeCHAT</u></font></strong> does help you to set up specific portal sites oriented towards the ones mentioned. So, why wait?... If have an idea, do contact us!</p>
+      <p><a href="#/contactus" class="w3-btn"><i class="fa fa-th"></i> Contact Us </a></p>
+    </div>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="images/livechat.png" width="700" height="394">
+    </div>
+  </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<div class="row" style="text-align:center;">
+    <!----------- Footer ------------>
+    
+   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">   
+    
+    <footer>
+        
+        <div class="footer-top"> 
+           <div class="container">
+             <div class="col-lg-2 col-xs-12 text-center">
+                 <a href="#"><i class="fa fa-facebook fa-2x"></i>Facebook</a>
+             </div>
+              <div class="col-lg-2 col-xs-12 text-center">
+                 <a href="#"><i class="fa fa-twitter fa-2x"></i>Twitter</a>
+             </div>
+              <div class="col-lg-2 col-xs-12 text-center">
+                 <a href="#"><i class="fa fa-flickr fa-2x"></i>Flickr</a>
+             </div>
+              <div class="col-lg-2 col-xs-12 text-center">
+                 <a href="#"><i class="fa fa-tumblr fa-2x"></i>Tumblr</a>
+             </div>
+              <div class="col-lg-2 col-xs-12 text-center">
+                 <a href="#"><i class="fa fa-github fa-2x"></i>Github</a>
+             </div>
+              <div class="col-lg-2 col-xs-12 text-center">
+                 <a href="#"><i class="fa fa-google-plus fa-2x"></i>Google</a>
+             </div>
+           </div> 
+        </div>  
+        
+        <div class="container" style="border-top:1px solid grey;">
+            <div class="row text-center">   
+                <div class="col-lg-6 col-lg-offset-3">
+                      <ul class="menu">
+                                 
+                             <li>
+                                <a href="#">Home</a>
+                              </li>
+                                   
+                              <li>
+                                 <a href="#">About</a>
+                              </li>
+                                   
+                              <li>
+                                <a href="#">Blog</a>
+                              </li>
+                                   
+                              <li>
+                                 <a href="#">Gallery</a>
+                              </li>
+                                   
+                              <li>
+                                <a href="#">Contact</a>
+                             </li>
+                   
+                        </ul>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    
+    
+    <div class="copyright">
+     <div class="container">
+       
+         <div class="row text-center">
+         	<p>Copyright © 2017 All rights reserved</p>
+         </div>
+         
+ 	   </div>
+    </div>
+        </footer>
+   </body>
+
+</html>

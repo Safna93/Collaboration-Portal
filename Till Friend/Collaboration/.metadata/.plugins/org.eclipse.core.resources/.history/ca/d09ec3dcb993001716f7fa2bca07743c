@@ -1,0 +1,15 @@
+<div class="w3-animate-opacity">
+<b><u>User Details:</u></b><br>
+<b>First name: </b>{{user.firstname}}<br><br>
+<b>Last name: </b>{{user.lastname}}<br><br>
+<b>Email: </b>{{user.email}}<br><br>
+
+
+<td><img src="http://localhost:8085/WeChatBackend/getimage/{{user.username}}"
+								width="60px" height="60px" class="img-rounded"></span></a><br><br><br>
+
+<td><a href="#/pendingfriendrequests" class="btn btn-default">Back</a>
+</tr>
+</tbody>
+</table>
+</div>
