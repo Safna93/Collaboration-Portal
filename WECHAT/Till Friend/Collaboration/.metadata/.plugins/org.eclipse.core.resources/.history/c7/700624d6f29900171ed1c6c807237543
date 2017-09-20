@@ -1,0 +1,53 @@
+app.controller('BlogPostController',function(BlogPostService,$scope,$location){
+	
+	BlogPostService.getBlogPostsWaitingForApproval().then(function(response){
+		$scope.blogPostsWaitingForApproval=response.data;
+	},function(response){
+		if(response.status==401)
+			$location.path('/login')
+	})
+	
+	
+	BlogPostService.getBlogPostsApproved().then(function(response){
+		$scope.blogPostsApproved=response.data
+	},function(response){
+		if(response.status==401)
+			$location.path('/login')
+	})
+	
+	$scope.addBlogPost=function(){
+		BlogPostService.addBlogPost($scope.blogPost).then(function(response){
+			console.log(response.status)
+			alert('BlogPost added successfully.. It is waiting for approval')
+			$location.path('/getallblogs')
+		},function(response){
+			if(response.status==401)
+				$location.path('/login')
+			$location.path('/saveblogpost')
+		})
+	}
+})
+app.controller('ChatController',function($rootScope,$scope,socket){
+	$scope.chats=[]
+	$scope.users=[]
+	$scope.stompClient=socket.stompClient;
+	$scope.$on('sockConnected',function(event,frame){
+		alert('Sock Connected...')
+		$scope.stompClient.subscribe("/topic/join",function(message){
+			user=JSON.parse(message.body)
+		
+	console.log("name of the user"+user)
+	   if(user != $scope.userName && $.inArray(user, $scope.users) == -1) {
+           $scope.addUser(user);
+           $scope.latestUser = user;
+           $scope.$apply();
+           $('#joinedChat').fadeIn(100).delay(2000).fadeOut(200);
+       }
+       
+})
+$scope.addUser(user){
+			$scope.users.push(user);
+			$scope.$apply()
+		}
+})
+})

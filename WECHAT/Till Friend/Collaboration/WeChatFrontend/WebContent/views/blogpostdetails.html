@@ -1,0 +1,73 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Blog Details</title>
+</head>
+
+<body>
+	<div class="w3-animate-opacity">
+		<div class="row">
+			<!-- <div class="col-sm-12 col-md-12 col-lg-12"> -->
+			<div class="panel panel-info">
+
+				<div class="panel-heading">
+					<div>{{blogPost.blogTitle}}</div>
+					&nbsp;&nbsp;&nbsp;&nbsp; <span><strong>CreatedBy: </strong>{{blogPost.postedBy.username}}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+					<span><strong>CreatedOn: </strong>{{blogPost.postedOn |
+						date:'medium'}}</span>
+				</div>
+
+				<div class="panel-body">{{blogPost.description}}</div>
+			</div>
+			{{error.message}}
+
+
+
+			<div class="row">
+				<h4>You may enter your comments here, if you like to share...</h4>
+				<form class="form-group">
+
+
+
+					<div>
+
+						<textarea placeholder="Enter Comments" class="form-control"
+							required ng-model="blogComment.commentText"></textarea>
+						<br>
+						<button ng-click="addComment()"
+							class="btn btn-primary form-control">Post Comment</button>
+					</div>
+				</form>
+			</div>
+
+		</div>
+
+
+
+		<div>
+			<button a href="" ng-click="getComments()" class="btn btn-default">
+				Show Comments</a> <br>
+				<br>
+				<ul ng-show="showcomments">
+					<li ng-repeat="blogComment in blogComments"
+						style="list-style: none">
+						<div>
+							{{blogComment.commentText}}&nbsp;&nbsp;&nbsp;&nbsp; <span><strong>by:
+							</strong>{{blogComment.commentedBy.username}}</span>&nbsp;&nbsp;&nbsp;&nbsp; <span><strong>
+							 on:
+							</strong>{{blogComment.commentedOn | date:'medium'}}</span>
+						</div> <br>
+					</li>
+				</ul>
+				</button>
+				</div>
+				
+				</div>
+				</form>
+				
+</body>
+</html>

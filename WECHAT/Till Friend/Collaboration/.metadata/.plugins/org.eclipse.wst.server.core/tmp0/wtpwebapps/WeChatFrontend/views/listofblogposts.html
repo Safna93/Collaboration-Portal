@@ -1,0 +1,44 @@
+
+<!--  <style>
+#ntext{
+ color: #fc0505;
+  }
+</style>-->
+
+<div ng-show="currentUser.role=='ADMIN'">
+<font face="arial narrow" size="4">
+<center>
+<h2><strong><u>Requested BlogPost:</u></strong></h2>
+<b></b><br>
+<table class="table table-striped">
+<thead>
+<tr><th>Title</th><th>Author</th><th>Date</th></tr>
+</thead>
+<tbody>
+<tr ng-repeat="blog in blogPostsWaitingForApproval">
+<td><a href="#/approveblogpost/{{blog.id}}" id="ntext">{{blog.blogTitle}}</a></td><td>{{blog.postedBy.username}}</td><td>{{blog.postedOn | date:'MM/dd/yyyy HH:mm'}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<!-- APPROVED BLOGPOST -->
+<div>
+<font face="arial narrow" size="4">
+<center>
+<h2><strong><u>Approved BlogPost:</u></strong></h2>
+<b></b><br>
+<b></b><br>
+<table class="table table-striped">
+<thead>
+<tr><th>Title</th><th>Author</th><th>Date</th></tr>
+</thead>
+<tbody>
+<tr ng-repeat="blog in blogPostsApproved">
+<td><a href="#/getblogpostbyid/{{blog.id}}" id="ntext">{{blog.blogTitle}}</a></td><td>{{blog.postedBy.username}}</td><td>{{blog.postedBy.username}}</td><td>{{blog.postedOn | date:'MM/dd/yyyy HH:mm'}}</td>
+</tr>
+</tbody>
+</table>
+
+</div>
