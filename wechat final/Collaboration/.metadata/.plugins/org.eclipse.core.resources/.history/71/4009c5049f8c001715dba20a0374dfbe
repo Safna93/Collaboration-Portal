@@ -1,0 +1,40 @@
+
+<!--  <style>
+#ntext{
+ color: #fc0505;
+  }
+</style>-->
+
+<div ng-show="currentUser.role=='ADMIN'">
+<font face="arial narrow" size="4">
+<center>
+<h2><strong><u>List of BlogPost waiting for approval:</u></strong></h2>
+<b></b><br>
+<table class="table table-striped">
+<thead>
+<tr><th>Title</th><th>Author</th><th>Date</th></tr>
+</thead>
+<tbody>
+<tr ng-repeat="blog in blogPostsWaitingForApproval">
+<td><a href="#/approveblogpost/{{blog.id}}" id="ntext">{{blog.blogTitle}}</a></td><td>{{blog.postedBy.username}}</td><td>{{blog.postedOn | date:'MM/dd/yyyy HH:mm'}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<!-- APPROVED BLOGPOST -->
+<div>
+<b>List of BlogPosts which are approved</b><br>
+<table class="table table-striped">
+<thead>
+<tr><th>Title</th><th>Author</th><th>Date</th></tr>
+</thead>
+<tbody>
+<tr ng-repeat="blog in blogPostsApproved">
+<td><a href="#/getblogpostbyid/{{blog.id}}" id="ntext">{{blog.blogTitle}}</a></td><td>{{blog.postedBy.username}}</td><td>{{blog.postedBy.username}}</td><td>{{blog.postedOn | date:'MM/dd/yyyy HH:mm'}}</td>
+</tr>
+</tbody>
+</table>
+
+</div>

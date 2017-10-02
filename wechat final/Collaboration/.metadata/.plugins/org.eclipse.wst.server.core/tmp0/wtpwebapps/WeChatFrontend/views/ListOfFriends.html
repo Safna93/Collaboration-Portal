@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>List of Friends</title>
+</head>
+<body>
+
+<div class="w3-animate-opacity">
+<center>
+<h1><strong>Your Friends</strong></h1>
+<p>Here are a list of your friends...</p>
+<br>
+
+<table class="table table-responsive">
+
+<tr>
+
+<th>Names</th>
+<!-- <th>Engage in a conversation</th>-->
+</tr>
+
+<tr ng-repeat="f in friends">
+<td ng-hide="f.fromId==currentUser.username">{{f.fromId}}</td>
+<td ng-hide="f.toId==currentUser.username">{{f.toId}}</td>
+<!--  <td><img src="http://localhost:8085/WeChatBackend/getimage/{{f.fromId}}"
+								width="30px" height="30px" class="img-rounded"></span></a>-->
+ <td><img src="http://localhost:8085/WeChatBackend/getimage/{{f.fromId}}"
+ng-hide="f.fromId==currentUser.username" width="50" height="50" class="img-rounded">
+<img src="http://localhost:8085/WeChatBackend/getimage/{{f.toId}}"
+ng-hide="f.toId==currentUser.username" width="50" height="50" class="img-rounded"></td>
+
+</tr>
+</table>
+
+</center>
+</div>
+
+</body>
+</html>

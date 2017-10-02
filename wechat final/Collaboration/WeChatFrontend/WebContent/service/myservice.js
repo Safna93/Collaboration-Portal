@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+app.factory('MyService',function($http){
+	var myService={}
+	friendService.getMyDetails=function(fromId){
+		  return  $http.get("http://localhost:8085/WeChatBackend/getmydetails/"+fromId)
+		}
+	return myService;
+})
+	

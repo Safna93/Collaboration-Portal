@@ -1,0 +1,33 @@
+/**
+ * 
+ */
+app.controller('ChatCtrl',['$rootScope','$scope','$socket',function($rootscope,$location){
+alert("entering chat controller")
+$scope.chats=[];
+$scope.stompClient=socket.stompClient;
+$scope.users=[]
+$scope.$on('$sockConnected',function(event,frame){
+	alert('sockconnected')
+	$scope.userName=$rootscope.currentUser.username;
+	$scope.stompClent.subscribe("/topic/join",function(message){
+		user=JSON.parse(message.body);
+		consiole.log(user)
+		if(user!=$scope.username&&$.inArray(user,$scope.users)==-1){
+			$scope.addUser(user);
+			$scope.latesrUser=user;
+			$scope.$apply();
+			$('#joinedChat').fadeIn(100).delay(5000).fadeOut(200);
+		}
+	});
+	
+	$scope.stompClient.subscribe('/app/join/'+$scope.username,function(message){
+		$scope.users=JSON.parse(message.body);
+		$scope.$apply();
+		});
+	});
+$scope.sendMessage=function(chat){
+	chaht.from=$scope.userName;
+	$scope
+}
+	
+}
